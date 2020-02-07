@@ -18,7 +18,7 @@ public class CanonWorking : MonoBehaviour
     void Update()
     {
         GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
-        clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3(0,0,speed));
+        clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0,0,speed));
         Physics.IgnoreCollision(clone.GetComponent<Collider>(), transform.root.GetComponent<Collider>());
     }
 }
