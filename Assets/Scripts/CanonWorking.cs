@@ -7,6 +7,7 @@ public class CanonWorking : MonoBehaviour
     public GameObject cannonball;
     public float rateoffire = 1;
     public float speed = 50;
+    private int delay = 0; 
     
     // Start is called before the first frame update
     void Start()
@@ -17,8 +18,20 @@ public class CanonWorking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
-        clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0,0,speed));
-        Physics.IgnoreCollision(clone.GetComponent<Collider>(), transform.root.GetComponent<Collider>());
+        delay = delay + 1;
+        if (delay == 1)
+        {
+
+            GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
+            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+            Physics.IgnoreCollision(clone.GetComponent<Collider>(), transform.root.GetComponent<Collider>());
+      
+            
+        }
+        if (delay == 250)
+        {
+            delay = 0;
+        }
     }
+
 }
