@@ -9,7 +9,7 @@ public class CanonWorking : MonoBehaviour
 
     public int speed = 100;
 
-    
+    public int count =0;
 
     private int delay = 0; 
     
@@ -29,6 +29,8 @@ public class CanonWorking : MonoBehaviour
             GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
 
             clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+
+            count = count + 1;
             
 
             
