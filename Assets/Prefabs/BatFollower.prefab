@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7833985691032176506}
   - component: {fileID: -6528735710084335738}
   - component: {fileID: 1019334834472773167}
+  - component: {fileID: 3245657584022267073}
   m_Layer: 8
   m_Name: BatFollower
   m_TagString: Untagged
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34022cc17bbbc43698cea91b7ed5c359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3245657584022267073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5478512706003370211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28de8d4e2eaaa3408b274243c28a274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audio: {fileID: 0}

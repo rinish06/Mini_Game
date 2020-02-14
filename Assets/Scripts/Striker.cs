@@ -10,8 +10,11 @@ public class Striker : MonoBehaviour
     {
         if (other.gameObject.CompareTag ( "cannonball"))
         {
-            Counter.GetComponent<Counter>().strikes ++;
-            Counter.GetComponent<Counter>().SetStrikeText();
+            if (Counter.GetComponent<Counter>().strikes < 3)
+            {
+                Counter.GetComponent<Counter>().strikes++;
+                Counter.GetComponent<Counter>().SetStrikeText();
+            }
         }
     }
 }

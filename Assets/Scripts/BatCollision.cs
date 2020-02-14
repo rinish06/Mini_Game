@@ -13,11 +13,21 @@ public class BatCollision : MonoBehaviour
         audio = GetComponent<AudioSource>();
     }
 
-    
-    private void onCollision(Collision collision)
+
+    /*private void onCollision(Collider collision)
     {
         if (collision.gameObject.CompareTag("cannonball"))
         {
+            collision.gameObject.SetActive(false);
+            audio.Play();
+        }
+    }*/
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("cannonball"))
+        {
+            //other.gameObject.SetActive(false);
             audio.Play();
         }
     }

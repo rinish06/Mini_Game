@@ -11,7 +11,9 @@ public class CanonWorking : MonoBehaviour
 
     public int count =0;
 
-    private int delay = 0; 
+    private int delay = 0;
+
+    public GameObject Counter;
     
     // Start is called before the first frame update
     void Start()
@@ -22,26 +24,29 @@ public class CanonWorking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        delay = delay + 1;
-        if (delay == 1)
+        if (Counter.GetComponent<Counter>().strikes < 3)
         {
+            delay = delay + 1;
+            if (delay == 1)
+            {
 
-            GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
+                GameObject clone = Instantiate(cannonball, transform.position, transform.rotation);
 
-            clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed));
+                clone.GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0, 0, speed));
 
-            count = count + 1;
-            
+                count = count + 1;
 
-            
-            
 
-      
-            
-        }
-        if (delay == 250)
-        {
-            delay = 0;
+
+
+
+
+
+            }
+            if (delay == 250)
+            {
+                delay = 0;
+            }
         }
     }
 
