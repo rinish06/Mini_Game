@@ -6,14 +6,18 @@ using UnityEngine;
 public class Counter : MonoBehaviour
 {
     public Text countText;
+    public Text strikeText;
     public Text winText;
     public Text loseText;
     public int count;
+    public int strikes;
     // Start is called before the first frame update
     void Start()
     {
         count = 0;
+        strikes = 0;
         SetCountText ();
+        setStrikeText ();
         winText.text = ""; 
         loseText.text = "";  
     }
@@ -34,6 +38,15 @@ public class Counter : MonoBehaviour
         if (count >= 5)
         {
             winText.text = "You Win!";
+        }
+    }
+
+    public void SetStrikeText ()
+    {
+        strikeText.text = "Strikes: " + strikes.ToString ();
+        if (strikes >= 3)
+        {
+            loseText.text = "3 Strikes! Game Over!";
         }
     }
 
