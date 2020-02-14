@@ -17,7 +17,7 @@ public class Counter : MonoBehaviour
         count = 0;
         strikes = 0;
         SetCountText ();
-        setStrikeText ();
+        SetStrikeText ();
         winText.text = ""; 
         loseText.text = "";  
     }
