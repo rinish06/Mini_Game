@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public GameObject Counter;
+
     void Update ()
     {
         transform.Rotate (new Vector3 (50, 50, 50) * Time.deltaTime);
@@ -11,9 +13,11 @@ public class Target : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        if (other.gameObject.CompareTag ( "baseball"))
+        if (other.gameObject.CompareTag ( "cannonball"))
         {
             this.gameObject.SetActive(false);
+            Counter.GetComponent<Counter>().count ++;
+            Counter.GetComponent<Counter>().SetCountText();
         }
     }
 }
