@@ -5,9 +5,9 @@ using UnityEngine;
 public class CanonWorking : MonoBehaviour
 {
     public GameObject cannonball;
-    public float rateoffire = 1;
+    
 
-    public int speed = 100;
+    public int speed = 50;
 
     public int count =0;
 
