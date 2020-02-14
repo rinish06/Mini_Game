@@ -1230,6 +1230,7 @@ MonoBehaviour:
   loseText: {fileID: 898630700}
   count: 0
   strikes: 0
+  strikePlane: {fileID: 414415962}
 --- !u!4 &762168329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 485514, guid: dc06161b6d97feb419f45f03b62e14b9,

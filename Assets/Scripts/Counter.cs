@@ -11,6 +11,7 @@ public class Counter : MonoBehaviour
     public Text loseText;
     public int count;
     public int strikes;
+    public GameObject strikePlane;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class Counter : MonoBehaviour
         if (count >= 5)
         {
             winText.text = "You Win!";
+            strikePlane.SetActive(false);
         }
     }
 
